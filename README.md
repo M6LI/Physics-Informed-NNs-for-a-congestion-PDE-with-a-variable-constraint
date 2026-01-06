@@ -17,7 +17,7 @@ $
 = \rho f, \\\\
 \partial_t \rho^\* + u\,\partial_x \rho^\* = 0.
 \end{cases}
-
+$
 
 ### Variables and parameters
 

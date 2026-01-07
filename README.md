@@ -16,7 +16,7 @@ The model solved by the PINN is given by:
 
 - **Momentum equation**
   
-  $\partial_t(\rho u) + \partial_x(\rho u^2) - \partial_x\!\left( \dfrac{\mu}{1-\rho}\,\partial_x u \right)$
+  $\partial_t(\rho u) + \partial_x(\rho u^2) - \partial_x\left( \dfrac{\mu}{1-\rho}\,\partial_x u \right) + \partial_x \left( \rho / \rho^\star \right)^\gamma = \rho f.$
 
 - **Transport of congestion threshold**
   

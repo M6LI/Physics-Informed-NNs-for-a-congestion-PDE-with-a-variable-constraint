@@ -52,7 +52,7 @@ The PINN is a fully connected multilayer perceptron (MLP):
 The final network outputs are constructed as
 - $\rho(t,x) = \rho_0(x)\\exp\big(A(t)\delta\rho\big)$  
 - $u(t,x) = u_0(x) + A(t)\ u$  
-- $\rho^\*(t,x) = \rho^\*_0(x)\,\exp\big(A(t)\\delta\rho^\*\big)$  
+- $\rho^\*(t,x) = \rho^\*_0(x)\exp\big(A(t)\\delta\rho^\*\big)$  
 
 where $A(t)=t/T$ is a time-scheduling factor that ensures **exact satisfaction of the initial conditions at $t=0$**.
 

@@ -1,6 +1,6 @@
 # PINNs for a Congestion-Driven PDE with Transported Capacity
 Based on arXiv:[TBC]
-This repository contains a **Physics-Informed Neural Network (PINN)** implementation in PyTorch for a congestion-type PDE system derived analytically. The aim is to improve our understanding of the qualitative properties of this system without resorting to traditional methods (e.g. finite difference) which do not scale well to higher dimensions.
+This repository contains a **Physics-Informed Neural Network (PINN)** implementation in PyTorch for a congestion-type PDE system, which is rigorously derived from particle dynamics in the above paper. The aim of the code is to build a network which helps to improve our understanding of the qualitative properties of this system without resorting to traditional methods (e.g. finite difference); these do not scale well to higher dimensions.
 
 The implementation uses a **two-stage optimisation strategy (Adam → L-BFGS)** and enforces initial conditions through **hard conditioning** built directly into the neural network architecture.
 
@@ -74,12 +74,6 @@ All loss weights are fully configurable.
 
 ---
 
-## Repository contents
-
-This repository is intentionally lightweight and self-contained:
-
-├── pinn_vcs.py # Main PINN implementation 
-└── README.md # This documentation
 
 
 

@@ -10,6 +10,7 @@ The implementation uses a **two-stage optimisation strategy (Adam → L-BFGS)** 
 
 The model solved by the PINN is the 1D system
 $$
+\begin{aligned}
 \begin{cases}
 \partial_t \rho + \partial_x(\rho u) = 0, \\
 \partial_t(\rho u) + \partial_x(\rho u^2)
@@ -18,7 +19,9 @@ $$
 = \rho f, \\
 \partial_t \rho^\* + u\,\partial_x \rho^\* = 0.
 \end{cases}
+\end{aligned}
 $$
+
 
 
 ### Variables and parameters

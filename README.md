@@ -8,8 +8,7 @@ The implementation uses a **two-stage optimisation strategy (Adam → L-BFGS)** 
 
 ## PDE model
 
-The model solved by the PINN is the 1D system
-The PDE system is given by:
+The model solved by the PINN is given by:
 
 - **Continuity equation**
   

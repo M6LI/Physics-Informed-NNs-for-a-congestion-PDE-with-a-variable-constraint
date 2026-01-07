@@ -11,14 +11,15 @@ The implementation uses a **two-stage optimisation strategy (Adam → L-BFGS)** 
 The model solved by the PINN is the 1D system
 $$
 \begin{cases}
-\partial_t \rho + \partial_x(\rho u) = 0, \\\\
+\partial_t \rho + \partial_x(\rho u) = 0, \\
 \partial_t(\rho u) + \partial_x(\rho u^2)
 - \partial_x\!\left( \dfrac{\mu}{1-\rho}\,\partial_x u \right)
 + \partial_x\!\left( \left(\dfrac{\rho}{\rho^\*}\right)^\gamma \right)
-= \rho f, \\\\
+= \rho f, \\
 \partial_t \rho^\* + u\,\partial_x \rho^\* = 0.
 \end{cases}
 $$
+
 
 ### Variables and parameters
 - $\rho(x,t)$ : density  
@@ -38,16 +39,16 @@ This system combines:
 The PINN is a fully connected multilayer perceptron (MLP):
 
 - **Input:** $(x,t)$  
-- **Output (raw):** $(\delta \rho,\ \delta u,\ \delta \rho^\*)$  
+- **Output (raw):** $(\delta \rho,\ \delta u, \ \delta \rho^\*)$  
 - **Hidden layers:** configurable (default: 5 layers of width 256)  
 - **Activation:** `tanh` (configurable)
 
 ### Hard initial-condition conditioning
 
 The final network outputs are constructed as
-- $\rho(t,x) = \rho_0(x)\,\exp\big(A(t)\,\delta\rho\big)$  
-- $u(t,x) = u_0(x) + A(t)\, u$  
-- $\rho^\*(t,x) = \rho^\*_0(x)\,\exp\big(A(t)\,\delta\rho^\*\big)$  
+- $\rho(t,x) = \rho_0(x)\\exp\big(A(t)\delta\rho\big)$  
+- $u(t,x) = u_0(x) + A(t)\ u$  
+- $\rho^\*(t,x) = \rho^\*_0(x)\,\exp\big(A(t)\\delta\rho^\*\big)$  
 
 where $A(t)=t/T$ is a time-scheduling factor that ensures **exact satisfaction of the initial conditions at $t=0$**.
 

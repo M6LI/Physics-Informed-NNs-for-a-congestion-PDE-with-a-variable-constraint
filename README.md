@@ -17,14 +17,11 @@ The PDE system is given by:
 
 - **Momentum equation**
   
-  `∂_t(ρ u) + ∂_x(ρ u²)
-   − ∂_x( (μ / (1 − ρ)) ∂_x u )
-   + ∂_x( (ρ / ρ*)^γ )
-   = ρ f`
+$\partial_t(\rho u) + \partial_x(\rho u^2) - \partial_x\!\left( \dfrac{\mu}{1-\rho}\,\partial_x u \right)$
 
 - **Transport of congestion threshold**
   
-  `∂_t ρ* + u ∂_x ρ* = 0`
+$\partial_t \rho^\* + u\,\partial_x \rho^\* = 0.$
 
 
 
